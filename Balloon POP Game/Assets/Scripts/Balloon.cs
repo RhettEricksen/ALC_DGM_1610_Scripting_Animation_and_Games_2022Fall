@@ -31,7 +31,6 @@ public class Balloon : MonoBehaviour
         {
             //scoreManager.IncreaseScoreText(scoreToGive);
             Destroy(gameObject);
-
         }
     }
 }
