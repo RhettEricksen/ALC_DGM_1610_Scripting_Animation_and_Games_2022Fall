@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 2881671455961699817}
   - component: {fileID: 2881671455961699816}
   - component: {fileID: 2881671455961699828}
+  - component: {fileID: 2214492682231901328}
   m_Layer: 0
   m_Name: Red_Balloon
   m_TagString: Untagged
@@ -301,5 +302,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519dd758d96aa408f92e031feea125bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreToGive: 100
   clickToPop: 3
   scaleToIncrease: 0.15
+  scoreManager: {fileID: 0}
+--- !u!114 &2214492682231901328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2881671455961699819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be2dc6a587a14df3b4809057ac14672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  upperBound: 25

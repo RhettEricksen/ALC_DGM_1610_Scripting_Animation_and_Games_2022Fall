@@ -11,18 +11,18 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       UpdateScoreText(); 
+       UpdateScoreText(); // Call UpdateScoreText function
     }
     
     public void IncreaseScoreText(int amount)
     {
         score += amount; //Increase score by amount
-        UpdateScoreText();
+        UpdateScoreText(); // Update score UI text
     }
     public void DecreaseScoreText(int amount)
     {
-        score -= amount;
-        UpdateScoreText();
+        score -= amount; //Decrease score by amount
+        UpdateScoreText(); // Update score UI text
     }
 
     public void UpdateScoreText()

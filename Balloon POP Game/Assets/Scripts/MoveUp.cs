@@ -10,7 +10,7 @@ public class MoveUp : MonoBehaviour
 
     private ScoreManager scoreManager; // A variable to reference the ScoreManger    
 
-    // Start is called before the first frame updat e
+    // Start is called before the first frame update
     void Start()
     {
        //Reference ScoreManager Component

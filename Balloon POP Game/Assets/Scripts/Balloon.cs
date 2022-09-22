@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Balloon : MonoBehaviour
 {
-    //public int scoreToGive = 100; // Score give for popped balloon
+    public int scoreToGive = 100; // Score give for popped balloon
 
     public int clickToPop = 3; // How many clicks before balloon pops
 
     public float scaleToIncrease = 0.10f; //Scale increase each time the balloon is clicked
 
-    //public ScoreManager scoeManager; // A variable to refernce the ScoreManager
+    public ScoreManager scoreManager; // A variable to refernce the ScoreManager
 
     // Start is called before the first frame update
     void Start()
     {
         //Reference ScoreManager Component
-        //scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
     void OnMouseDown()
@@ -27,10 +27,10 @@ public class Balloon : MonoBehaviour
         //Increase balloon volume
         transform.localScale += Vector3.one * scaleToIncrease;
 
-        if(clickToPop ==0)
+        if(clickToPop == 0)
         {
-            //scoreManager.IncreaseScoreText(scoreToGive);
-            Destroy(gameObject);
+            scoreManager.IncreaseScoreText(scoreToGive);
+            Destroy(gameObject); // Pop Balloon
         }
     }
 }
