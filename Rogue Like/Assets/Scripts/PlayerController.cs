@@ -18,10 +18,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hInput = input.GetAxis("Horizontal");
-        vInput = input.GetAxis("Vertical")
+        hInput = Input.GetAxis("Horizontal");
+        vInput = Input.GetAxis("Vertical");
         
-        transform.translate(Vector2.right * hInput * speed * Time.deltaTime); // Move left and right
-        transform.translate(Vector2.up * vInput * speed * Time.deltaTime); // Move forward and back
+        transform.Translate(Vector2.right * hInput * speed * Time.deltaTime); // Move left and right
+        transform.Translate(Vector2.up * vInput * speed * Time.deltaTime); // Move forward and back
     }
 }
