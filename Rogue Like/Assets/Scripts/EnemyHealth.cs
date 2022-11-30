@@ -11,7 +11,6 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1f;
         currentHealth = maxHealth;
     }
     
@@ -19,11 +18,11 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= dmgAmount;
         Debug.Log("Enemies Health = "+ currentHealth);
+        
         if(currentHealth <=0)
         {
             Debug.Log("Enemy has Died!");
-            Time.timeScale = 0f;
-            //Destroy(gameObject,deathDelay);
+            Destroy(gameObject,deathDelay);
         }
     }
 }

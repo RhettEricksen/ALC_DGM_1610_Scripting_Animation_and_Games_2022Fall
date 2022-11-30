@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         target = new Vector2(player.position.x, player.position.y);   
-        playerHealth = GameObject.Find("player").GetComponent<Health>(); 
+        playerHealth = GameObject.Find("Player").GetComponent<Health>(); 
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    void onTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
